@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/marvelous-project/static/css/main.71996efe.css",
+    "main.js": "/marvelous-project/static/js/main.e380082f.js",
+    "static/js/787.91ff0c5f.chunk.js": "/marvelous-project/static/js/787.91ff0c5f.chunk.js",
+    "static/media/deadpool.png": "/marvelous-project/static/media/deadpool.1ae2c35651e62ae8647b.png",
+    "index.html": "/marvelous-project/index.html",
+    "main.71996efe.css.map": "/marvelous-project/static/css/main.71996efe.css.map",
+    "main.e380082f.js.map": "/marvelous-project/static/js/main.e380082f.js.map",
+    "787.91ff0c5f.chunk.js.map": "/marvelous-project/static/js/787.91ff0c5f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71996efe.css",
+    "static/js/main.e380082f.js"
+  ]
+}
