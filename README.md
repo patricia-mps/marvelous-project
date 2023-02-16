@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+[![header][header-url]][header-link]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Marvelous Project
 
-## Available Scripts
+[![Frontend][Frontend-image]]
+[![React][React-image]]
+[![TypeScript][TypeScript-image]]
 
-In the project directory, you can run:
+> Short blurb about your project idea.
 
-### `npm start`
+A small project made with React & Marvel API
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Live at
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[header-link]
 
-### `npm test`
+## Built with
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React (Typescript)
+- CSS Modules
+- Sass
+- Marvel API
+- Jest + React Testing Library
+- Redux Toolkit + Axios
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Display a list of Marvel Characters
+- Add, edit or remove any of the existings characters using only the current state
+- Displays a toast for every relevant user action
+- Use of Skeleton
+- Mobile first approach
+- Unit and integration tests
+- Eslint and Prettier
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Create .env file in root directory and add the following:
 
-### `npm run eject`
+```
+REACT_APP_API_TS={marvel-api-time-stamp}
+REACT_APP_API_HASH=7{marvel-api-hash}
+REACT_APP_API_KEY={marvel-api-key}
+REACT_APP_API_URL={marvel-api-url}
+REACT_APP_NO_IMAGE={no-image-link-default}
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+npm install
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Start dev server:
 
-## Learn More
+```
+npm run start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- Markdown link & img dfn's -->
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[header-url]: src/assets/images/deadpool.png
+[header-link]: https://github.com/patricia-mps
+[Frontend-image]: https://img.shields.io/badge/Frontend-Ionic-blue?style=for-the-badge
+[React-image]: https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge
+[TypeScript-image]: https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square

@@ -1,0 +1,129 @@
+@import '../../assets/scss/variables';
+
+.component {
+  font-family: 'Anton', sans-serif;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  min-height: 40vmin;
+  padding: 1% 10% 0% 40%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  background: map-get($colors, dark) url('../../assets/images/deadpool.png') no-repeat left bottom;
+  background-size: 50%;
+
+  h2 {
+    color: map-get($colors, primary);
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1rem;
+
+    @media (min-width: map-get($breakpoints, sm)) {
+      font-size: 1rem;
+    }
+
+    @media (min-width: map-get($breakpoints, md)) {
+      font-size: 1rem;
+    }
+
+    @media (min-width: map-get($breakpoints, lg)) {
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: map-get($breakpoints, xl)) {
+      font-size: 1.5rem;
+    }
+
+    &:first-child {
+      text-align: left;
+      margin-left: -1500px;
+      animation: slideinleft 3s ease-out 0s 1 forwards;
+    }
+
+    &:last-child {
+      text-align: right;
+      margin-right: -800px;
+      animation: slideinright 3s ease-out 1s 1 forwards;
+    }
+  }
+
+  h1 {
+    color: map-get($colors, light);
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0;
+    font-size: 3rem;
+
+    @media (min-width: map-get($breakpoints, sm)) {
+      font-size: 4rem;
+    }
+
+    @media (min-width: map-get($breakpoints, md)) {
+      font-size: 8rem;
+    }
+
+    @media (min-width: map-get($breakpoints, lg)) {
+      font-size: 10rem;
+    }
+
+    @media (min-width: map-get($breakpoints, xl)) {
+      font-size: 10rem;
+    }
+
+    span:first-child {
+      display: block;
+      text-align: left;
+      margin-left: -1500px;
+      animation: slideinleft 3s ease-out 0s 1 forwards;
+    }
+
+    span:last-child {
+      display: block;
+      text-align: right;
+      margin-right: -800px;
+      animation: slideinright 3s ease-out 1s 1 forwards;
+    }
+  }
+}
+
+@keyframes slideinleft {
+  0% {
+    margin-left: -1500px;
+  }
+
+  20% {
+    margin-left: -1500px;
+  }
+
+  35% {
+    margin-left: 0px;
+  }
+
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes slideinright {
+  0% {
+    margin-right: -800px;
+  }
+
+  20% {
+    margin-right: -800px;
+  }
+
+  35% {
+    margin-right: 0px;
+  }
+
+  100% {
+    margin-right: 0px;
+  }
+}

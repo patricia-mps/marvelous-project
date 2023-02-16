@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+$colors: (
+  primary: #e62429,
+  secondary: #333333,
+  success: green,
+  warning: #ffcd28,
+  light: #f8f9fa,
+  dark: #1d1d1d,
+);
+
+$distance: (
+  s: 8px,
+  m: 16px,
+  l: 24px,
+  xl: 32px,
+);
+
+$breakpoints: (
+  xs: 425px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);

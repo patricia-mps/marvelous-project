@@ -1,0 +1,27 @@
+@import '../../assets/scss/variables';
+
+.component {
+  border: 0px;
+  padding: map-get($distance, s) map-get($distance, m);
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+
+  &.success {
+    background-color: map-get($colors, success);
+  }
+
+  &.secondary {
+    background-color: rgba(map-get($colors, secondary), 0.6);
+  }
+
+  &.danger {
+    background-color: map-get($colors, primary);
+  }
+
+  &:disabled {
+    color: rgba(16, 16, 16, 0.3);
+    background-color: map-get($colors, light);
+  }
+}

@@ -1,0 +1,38 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.component {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+
+  .modal {
+    padding: map-get($distance, l);
+    background-color: white;
+    @include box-shadow(0px 0px 10px 0px rgba(map-get($colors, secondary), 0.8));
+
+    .header {
+      h2 {
+        margin-top: 0;
+      }
+    }
+
+    .body {
+    }
+
+    .footer {
+      text-align: right;
+
+      button:first-child {
+        margin-right: map-get($distance, s);
+      }
+    }
+  }
+}

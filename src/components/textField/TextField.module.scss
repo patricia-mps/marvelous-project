@@ -1,0 +1,39 @@
+@import '../../assets/scss/variables';
+
+.component {
+  display: block;
+
+  label {
+    display: block;
+  }
+
+  .helper {
+    font-size: 12px;
+  }
+
+  .input {
+    min-height: 40px;
+    margin-bottom: map-get($distance, s);
+    width: 100%;
+
+    input {
+      width: 100%;
+      display: block;
+      min-height: 25px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+  }
+
+  &.invalid {
+    input {
+      border: 1px solid map-get($colors, primary);
+    }
+  }
+
+  span.error {
+    font-size: 11px;
+    color: map-get($colors, primary);
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../assets/scss/variables';
+
+.component {
+  footer {
+    text-align: right;
+
+    button:first-child {
+      margin-right: map-get($distance, m);
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import '../../assets/scss/variables';
+
+.component {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: map-get($distance, xl);
+  }
+
+  .body {
+    display: flex;
+    justify-content: center;
+
+    h3:first-child {
+      margin-top: 0;
+    }
+
+    .image,
+    .skeletonImage {
+      flex: 1 0 40%;
+      text-align: center;
+    }
+
+    .form,
+    .skeletonBody {
+      flex: 1 0 60%;
+    }
+
+    .skeletonBody {
+      span {
+        margin-bottom: map-get($distance, m);
+      }
+    }
+  }
+}

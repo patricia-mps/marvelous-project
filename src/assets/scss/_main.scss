@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: 'Comic Neue', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+}
+
+main,
+.container {
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 345px;
+  min-height: 50vh;
+  position: relative;
+  margin: map-get($distance, xl) auto;
+
+  @media (min-width: map-get($breakpoints, sm)) {
+    max-width: 540px;
+  }
+
+  @media (min-width: map-get($breakpoints, md)) {
+    max-width: 720px;
+  }
+
+  @media (min-width: map-get($breakpoints, lg)) {
+    max-width: 960px;
+  }
+
+  @media (min-width: map-get($breakpoints, xl)) {
+    max-width: 1140px;
+  }
+}
