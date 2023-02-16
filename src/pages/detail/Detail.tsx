@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { FC, useState, useEffect, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
 import style from './Detail.module.scss';
@@ -26,6 +26,7 @@ const Detail: FC = (): JSX.Element => {
   const dispatch = useDispatch();
   const { id } = useParams();
 
+  const formRef = useRef<HTMLDivElement>(null);
   const charactersList = useSelector(state => state.characters.items);
   const characterItem = useSelector(state => state.characters.item);
   const isLoading = useSelector(state => state.characters.loading);
@@ -39,7 +40,7 @@ const Detail: FC = (): JSX.Element => {
   const { thumbnail, name, description }: Character = character;
 
   useEffect(() => {
-    if(characterItem.id === Number(id)) setCharacter(characterItem)
+    if (characterItem.id === Number(id)) setCharacter(characterItem);
   }, [characterItem]);
 
   useEffect(() => {
@@ -47,8 +48,7 @@ const Detail: FC = (): JSX.Element => {
     if (id && charactersList.length > 0) {
       const characterInList = handleFindInCharactersList(id);
       if (!!characterInList) setCharacter(characterInList);
-    }
-    else if (id && id.includes('n') && charactersList.length === 0) setIsError(true);
+    } else if (id && id.includes('n') && charactersList.length === 0) setIsError(true);
     else dispatch(getCharacterById(characterId));
   }, [id, charactersList]);
 
@@ -66,6 +66,7 @@ const Detail: FC = (): JSX.Element => {
   };
 
   const handleToggleEditMode = (): void => {
+    if (formRef.current) formRef.current.scrollIntoView({ behavior: 'smooth' });
     setIsEditMode(!isEditMode);
   };
 
@@ -78,9 +79,7 @@ const Detail: FC = (): JSX.Element => {
     return (
       <section className={style.component}>
         <div className={style.body}>
-          <div className={style.skeletonImage}>
-            <Skeleton width={200} height={250} />
-          </div>
+          <Skeleton width={200} height={250} />
           <div className={style.skeletonBody}>
             <Skeleton height={30} />
             <Skeleton height={30} />
@@ -117,10 +116,18 @@ const Detail: FC = (): JSX.Element => {
       </header>
 
       <div className={style.body}>
-        <div className={style.image}>
-          <img src={thumbnail} alt={name} width="80%" />
-        </div>
-        <div className={style.form}>
+        <Bubble
+          body={
+            <>
+              {thumbnail ? (
+                <img src={thumbnail} alt={name} />
+              ) : (
+                <img src={process.env.REACT_APP_NO_IMAGE} alt="default" />
+              )}
+            </>
+          }
+        />
+        <div className={style.form} ref={formRef}>
           {!isEditMode ? (
             <>
               <h3>Name</h3>

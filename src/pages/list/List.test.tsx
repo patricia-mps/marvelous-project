@@ -64,7 +64,7 @@ test('renders create new Character modal correctly', async () => {
 test('renders remove Character', async () => {
   render(pageList);
   const firstCard = screen.getAllByTestId('card')[0];
-  const removeButon = within(firstCard).getByText('X')
+  const removeButon = within(firstCard).getByText('X');
 
   fireEvent.click(removeButon);
   await waitFor(() => {

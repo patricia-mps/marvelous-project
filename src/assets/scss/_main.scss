@@ -7,6 +7,11 @@ body {
   flex-direction: column;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
 main,
 .container {
   flex-grow: 1;
