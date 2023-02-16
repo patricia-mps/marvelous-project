@@ -2,17 +2,14 @@
 
 # Marvelous Project
 
-[![Frontend][Frontend-image]]
-[![React][React-image]]
-[![TypeScript][TypeScript-image]]
+![React][React-image]
+![TypeScript][TypeScript-image]
 
-> Short blurb about your project idea.
-
-A small project made with React & Marvel API
+> A small project made with React & Marvel API
 
 ## Live at
 
-[header-link]
+![https://patricia-mps.github.io/marvelous-project/][header-link]
 
 ## Built with
 
@@ -61,7 +58,7 @@ npm run start
 <!-- Markdown link & img dfn's -->
 
 [header-url]: src/assets/images/deadpool.png
-[header-link]: https://github.com/patricia-mps
+[header-link]: https://patricia-mps.github.io/marvelous-project/
 [Frontend-image]: https://img.shields.io/badge/Frontend-Ionic-blue?style=for-the-badge
 [React-image]: https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge
 [TypeScript-image]: https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square
