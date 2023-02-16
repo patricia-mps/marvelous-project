@@ -9,7 +9,7 @@
 
 ## Live at
 
-![https://patricia-mps.github.io/marvelous-project/][header-link]
+https://patricia-mps.github.io/marvelous-project/
 
 ## Built with
 
@@ -57,7 +57,7 @@ npm run start
 
 <!-- Markdown link & img dfn's -->
 
-[header-url]: src/assets/images/deadpool.png
+[header-url]: marvelous.png
 [header-link]: https://patricia-mps.github.io/marvelous-project/
 [Frontend-image]: https://img.shields.io/badge/Frontend-Ionic-blue?style=for-the-badge
 [React-image]: https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge
