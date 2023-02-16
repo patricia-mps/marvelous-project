@@ -21,8 +21,8 @@ const Card: FC<Props> = ({
 
   const handleClickCard = (e: any): void => {
     e.stopPropagation();
-    if(isNew !== undefined) onClickCard(`${id}`, isNew);
-  }
+    if (isNew !== undefined) onClickCard(`${id}`, isNew);
+  };
 
   return (
     <article

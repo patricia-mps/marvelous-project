@@ -24,8 +24,8 @@ const items: Character[] = [
 ];
 
 beforeAll(() => {
-    window.history.pushState({}, "Detail Page", "/character/1");
-  });
+  window.history.pushState({}, 'Detail Page', '/character/1');
+});
 
 const store = createMockStore({
   characters: {
@@ -51,17 +51,18 @@ test('renders Detail correctly', () => {
   render(pageDetail);
 
   expect(screen.getAllByTestId('button')).toHaveLength(2);
-  expect(screen.getByText("Name")).toBeInTheDocument();
-  expect(screen.getByText("Description")).toBeInTheDocument();
+  expect(screen.getByText('Name')).toBeInTheDocument();
+  expect(screen.getByText('Description')).toBeInTheDocument();
   expect(screen.getByRole('img')).toHaveAttribute('src', 'lorem.png');
   expect(screen.getByRole('img')).toHaveAttribute('alt', 'First Element');
 });
 
 test('renders Detail click edit', async () => {
-    render(pageDetail);
-  
-    fireEvent.click(screen.getByText(/edit/i));
-    await waitFor(() => {
-      expect(screen.getByText(/submit/i)).toBeInTheDocument();
-    });
+  window.HTMLElement.prototype.scrollIntoView = function () {};
+  render(pageDetail);
+
+  fireEvent.click(screen.getByText(/edit/i));
+  await waitFor(() => {
+    expect(screen.getByText(/submit/i)).toBeInTheDocument();
   });
+});

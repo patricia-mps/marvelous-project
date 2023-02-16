@@ -13,21 +13,36 @@
 
   .body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+
+    & > div {
+      padding: 5%;
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      flex: 1;
+    }
+
+    @media (min-width: map-get($breakpoints, md)) {
+      flex-direction: row;
+    }
+
+    @media (min-width: map-get($breakpoints, xxl)) {
+      grid-template-columns: repeat(4, 1fr);
+    }
 
     h3:first-child {
       margin-top: 0;
     }
 
-    .image,
-    .skeletonImage {
-      flex: 1 0 40%;
-      text-align: center;
+    img {
+      object-fit: cover;
+      width: 100%;
     }
 
-    .form,
-    .skeletonBody {
-      flex: 1 0 60%;
+    p {
+      margin: 0;
     }
 
     .skeletonBody {

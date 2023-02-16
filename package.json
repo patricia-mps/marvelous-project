@@ -31,13 +31,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prettier": "pretty-quick --staged",
+    "prettier": "prettier --write .",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test && npm run prettier"
+      "pre-commit": "npm test && npm run pretty-quick --staged"
     }
   },
   "jest": {
