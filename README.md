@@ -36,11 +36,10 @@ Create .env file in root directory and add the following:
 
 ```
 REACT_APP_API_TS={marvel-api-time-stamp}
-REACT_APP_API_HASH=7{marvel-api-hash}
+REACT_APP_API_HASH={marvel-api-hash}
 REACT_APP_API_KEY={marvel-api-key}
 REACT_APP_API_URL={marvel-api-url}
 REACT_APP_NO_IMAGE={no-image-link-default}
-
 ```
 
 Install dependencies:
